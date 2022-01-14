@@ -40,13 +40,9 @@ export const getCountries = (payload) => ({
   payload,
 });
 
-export const getCountriesAsync = () => {
-  return ((dispatch) => {
-    axios.get(baseUrl).then((res) => { dispatch(getCountries(res.data)) })
-
-  })
-
-}
+export const getCountriesAsync = () => ((dispatch) => {
+  axios.get(baseUrl).then((res) => { dispatch(getCountries(res.data)); });
+});
 
 export const getCurrentCountry = (payload) => ({
   type: GET_CURRENT_COUNTRY,
@@ -56,9 +52,9 @@ export const getCurrentCountry = (payload) => ({
 const dataReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_COUNTRIES: {
-      const newState = [...action.payload]
-           return newState
-    };
+      const newState = [...action.payload];
+      return newState;
+    }
 
     case SEARCH_COUNTRY:
       return {
@@ -66,14 +62,12 @@ const dataReducer = (state = initialState, action) => {
         searchCountry: action.payload,
       };
 
-    case GET_CURRENT_COUNTRY:
-      return {
-        ...state,
-        currentState: state.countries.filter((country) => country.id === action.payload)[0],
-      };
+    // case GET_CURRENT_COUNTRY:
+    //   // console.log('current state', currentState);
+    //   return state.filter((country) => country.country.toLowerCase().includes(action.payload.toLowerCase()));
 
     default:
-      return state;
+      return state || initialState;
   }
 };
 

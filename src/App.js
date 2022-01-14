@@ -7,6 +7,7 @@ import {
 // import { getCountries } from './redux/reducers/dataReducer';
 import Card from './components/Card';
 import CardList from './components/CardList';
+import Home from './components/Home';
 // import Cards from './components/Cards';
 
 function App() {
@@ -17,10 +18,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<CardList />} />
-              <Route
-                path="country/:id" 
-                element={<Card />}
-              />
+          <Route
+            path="/Home"
+            element={<Home />}
+          />
         </Routes>
 
       </div>
