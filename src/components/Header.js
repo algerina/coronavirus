@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsGear, BsMic } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
@@ -17,17 +17,17 @@ const Header = () => (
           <IoIosArrowBack />
           {' '}
         </Link>
-        <a className="link dim white dib mr6" href="#" title="year">Coranavirus Tracker</a>
-        <a className="link dim white dib mr3" href="#" title="mic">
+        <span className="link dim white dib mr6" href="#" title="year">Coranavirus Tracker</span>
+        <span className="link dim white dib mr3" href="#" title="mic">
           {' '}
           <BsMic />
           {' '}
-        </a>
-        <a className="link dim white dib mr10" href="#" title="parameters">
+        </span>
+        <span className="link dim white dib mr10" href="#" title="parameters">
           {' '}
           <BsGear />
           {' '}
-        </a>
+        </span>
       </nav>
     </header>
   </div>
