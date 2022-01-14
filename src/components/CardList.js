@@ -3,36 +3,28 @@ import { useSelector, useDispatch } from 'react-redux';
 import Card from './Card';
 import SearchBox from './SearchBox';
 import Header from './Header';
-import World from './World';
 import { getCountriesAsync } from '../redux/reducers/dataReducer';
 
 const CardList = () => {
-    const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
-    useEffect(() => {
-        dispatch(getCountriesAsync());
-    }, []);
+  const dispatch = useDispatch();
+  let countries = useSelector((state) => state.dataReducer);
 
-    const dispatch = useDispatch();
-    let countries = useSelector((state) => state.dataReducer);
+  useEffect(() => {
+    dispatch(getCountriesAsync());
+  }, []);
 
-    // const searchChange = (e) => {
-    //   const searchTerm = e.target.value;
-  
-    if (searchTerm.length > 0) {
-      countries = countries.filter((country) => country.country.toLowerCase().includes(searchTerm.toLowerCase()));
-    }
+  if (searchTerm.length > 0) {
+    countries = countries.filter((country) => country.country.toLowerCase().includes(searchTerm.toLowerCase()));
+  }
 
-    //   return countries;
-    // }
-
-    return (
-        <div>
-            <Header />
-            <SearchBox setSearchTerm={setSearchTerm} />
-            <World />
-            <div>
-                {countries.map(country => {
+  return (
+    <div>
+      <Header />
+      <SearchBox setSearchTerm={setSearchTerm} />
+      <div>
+        {countries.map(country => {
                     if (country.countryInfo.iso3) {
                         return (
                             <Card
