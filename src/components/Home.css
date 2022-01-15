@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@100&display=swap');
+
+body {
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+
+  /* letter-spacing: 0.2vh; */
+  text-transform: uppercase;
+}
+
+.dark {
+  background-color: rgb(72 74 225);
+}
+
+.country {
+  background-color: rgb(72 74 225);
+  padding: 3rem;
+  font-size: xx-large;
+}
+
+div {
+  padding-bottom: 1rem;
+}
+
+.back {
+  color: white;
+  margin: 1rem;
+  background-color: rgb(72 74 225);
+}
