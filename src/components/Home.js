@@ -1,58 +1,58 @@
 import React from 'react';
-import { MdCoronavirus } from 'react-icons/md';
+import { PropTypes } from 'prop-types';
+import './Home.css';
 
-export default function Home() {
+const Home = (props) => {
+  const { country } = props;
   return (
     <div>
-      <div value={{ style: { height: 10 } }}>
-        <MdCoronavirus />
+      <div className="country">{country.country}</div>
+      <div>
+        TOTAL CASES:
+        {' '}
+        {country.cases}
       </div>
-      <div className="pa4">
-        <div className="overflow-auto">
-          <table className="f6 w-100 mw8 center" cellSpacing="0">
-            <thead>
-              <tr className="stripe-dark">
-                <th className="fw6 tl pa3">N</th>
-                <th className="fw6 tl pa3">U</th>
-                <th className="fw6 tl pa3">E</th>
-                <th className="fw6 tl pa3">ID</th>
-              </tr>
-            </thead>
-            <tbody className="lh-copy">
-              <tr classame="stripe-dark">
-                <td className="pa3">Ha</td>
-                <td className="pa3">san</td>
-                <td className="pa3">co</td>
-                <td className="pa3">14419232532474</td>
-              </tr>
-              <tr className="stripe-dark">
-                <td className="pa3">Taral Hicks</td>
-                <td className="pa3">ks</td>
-                <td className="pa3">ongdomain.co</td>
-                <td className="pa3">72326219423551</td>
-              </tr>
-              <tr className="stripe-dark">
-                <td className="pa3">Tyrin Turner</td>
-                <td className="pa3">@tt</td>
-                <td className="pa3">ty@companywithalongdomain.co</td>
-                <td className="pa3">92325170324444</td>
-              </tr>
-              <tr className="stripe-dark">
-                <td className="pa3">Oliver Grant</td>
-                <td className="pa3">d</td>
-                <td className="pa3">o</td>
-                <td className="pa3">71165170352909</td>
-              </tr>
-              <tr className="stripe-dark">
-                <td className="pa3">Dean Blanc</td>
-                <td className="pa3"> h</td>
-                <td className="pa3">d</td>
-                <td className="pa3">71865178111909</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div className="dark">
+        Total Deaths:
+        {' '}
+        {country.deaths}
+      </div>
+      <div>
+        Today cases:
+        {' '}
+        {country.todayCases}
+      </div>
+      <div className="dark">
+        Today Deaths:
+        {' '}
+        {country.todayDeaths}
+      </div>
+      <div>
+        Tests:
+        {' '}
+        {country.tests}
+      </div>
+      <div className="dark">
+        Recovered:
+        {' '}
+        {country.recovered}
+      </div>
+      <div>
+        Active cases:
+        {' '}
+        {country.active}
+      </div>
+      <div className="dark">
+        Critical cases:
+        {' '}
+        {country.critical}
       </div>
     </div>
   );
-}
+};
+
+Home.propTypes = {
+  country: PropTypes.instanceOf(Object).isRequired,
+};
+
+export default Home;

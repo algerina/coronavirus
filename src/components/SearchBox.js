@@ -1,13 +1,7 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCurrentCountry, getCountries } from '../redux/reducers/dataReducer';
+import PropTypes from 'prop-types';
 
-const SearchBox = ({ setSearchTerm }) => {
-  // const dispatch = useDispatch();
-  // const countries = useSelector((state) => state.dataReducer);
-
-
-  return (
+const SearchBox = ({ setSearchTerm }) => (
   <div className="pa2">
     <input
       className="pa3 ba b--pink bg-lightest-pink"
@@ -16,7 +10,10 @@ const SearchBox = ({ setSearchTerm }) => {
       onChange={(e) => setSearchTerm(e.target.value)}
     />
   </div>
-)
-}
+);
+
+SearchBox.propTypes = {
+  setSearchTerm: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default SearchBox;

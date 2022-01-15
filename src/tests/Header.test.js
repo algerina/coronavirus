@@ -1,15 +1,16 @@
-
-import { render, screen, cleanup } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import store from '../Redux/store';
+import React from 'react';
+import TestRenderer from 'react-test-renderer';
+import renderer from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
 import Header from '../components/Header';
-
-afterEach(() => {
-  cleanup();
-});
 
 describe('render  component to the DOM', () => {
   test('render Header component', async () => {
-    render(<Provider store={store}><Header /></Provider>);
+    const tree = renderer.create(
+      <MemoryRouter> 
+        <Header />
+      </MemoryRouter>,
+    ).toJSON;
+    expect(tree).toMatchSnapshot();
   });
 });

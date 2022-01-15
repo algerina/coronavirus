@@ -17,11 +17,11 @@ const initialState = [
       _id: 0,
       iso3: 'afg',
       flag: 'text',
-    }
+    },
   },
   {
     id: 1,
-    country: 'whatever',
+    country: 'Lebanon',
     cases: '3000',
     Deaths: '300',
     Recovered: '20',
@@ -29,7 +29,7 @@ const initialState = [
       _id: 1,
       iso3: 'ajt',
       flag: 'text',
-    }
+    },
   },
 ];
 
@@ -61,10 +61,6 @@ const dataReducer = (state = initialState, action) => {
         ...state,
         searchCountry: action.payload,
       };
-
-    // case GET_CURRENT_COUNTRY:
-    //   // console.log('current state', currentState);
-    //   return state.filter((country) => country.country.toLowerCase().includes(action.payload.toLowerCase()));
 
     default:
       return state || initialState;

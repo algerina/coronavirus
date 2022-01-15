@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Card from './Card';
 import SearchBox from './SearchBox';
 import Header from './Header';
@@ -9,34 +10,33 @@ const CardList = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const dispatch = useDispatch();
-  let countries = useSelector((state) => state.dataReducer);
+  const countries = useSelector((state) => state.dataReducer);
 
   useEffect(() => {
     dispatch(getCountriesAsync());
   }, []);
 
-  if (searchTerm.length > 0) {
-    countries = countries.filter((country) => country.country.toLowerCase().includes(searchTerm.toLowerCase()));
-  }
-
   return (
     <div>
       <Header />
       <SearchBox setSearchTerm={setSearchTerm} />
-      <div>
-        {countries.map(country => {
-                    if (country.countryInfo.iso3) {
-                        return (
-                            <Card
-                                key={country.countryInfo.iso3}
-                                id={country.countryInfo._id}
-                                data={country}
-                            />
-                        );
-                    }
-                })}
-            </div>
-        </div>
-    );
+      {
+      countries
+        .filter((country) => country.country.toLowerCase().includes(searchTerm.toLowerCase()))
+        .map((item) => (
+          <>
+            <Link key={item.country} to={item.country}>
+              <Card
+                key={item.country}
+                id={item.countryInfo}
+                data={item}
+              />
+            </Link>
+          </>
+        ))
+    }
+
+    </div>
+  );
 };
 export default CardList;
