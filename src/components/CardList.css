@@ -1,5 +1,5 @@
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.2rem;
 }

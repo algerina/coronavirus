@@ -1,16 +1,11 @@
-import React from 'react';
-import TestRenderer from 'react-test-renderer';
+import { BrowserRouter as Router } from 'react-router-dom';
+import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
-import { MemoryRouter } from 'react-router-dom';
 import Header from '../components/Header';
 
-describe('render  component to the DOM', () => {
-  test('render Header component', async () => {
-    const tree = renderer.create(
-      <MemoryRouter> 
-        <Header />
-      </MemoryRouter>,
-    ).toJSON;
-    expect(tree).toMatchSnapshot();
+describe('Check page rendering', () => {
+  it('Should render without error', () => {
+    const header = renderer.create(<Router><Header /></Router>).toJSON();
+    expect(header).toMatchSnapshot();
   });
 });

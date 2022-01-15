@@ -1,21 +1,21 @@
 body {
-    text-align: center;
-    margin: 1rem;
-    color: white;
-    font-size: x-large;
-    padding: 10px;;
+  text-align: center;
+  margin: 1rem;
+  color: white;
+  font-size: x-large;
+  padding: 10px;
 }
 
 .dark {
-    background-color: rgb(72 74 225);
+  background-color: rgb(72 74 225);
 }
 
 .country {
-    background-color: rgb(72 74 225);
-    padding: 3rem;
-    font-size: xx-large;
+  background-color: rgb(72 74 225);
+  padding: 3rem;
+  font-size: xx-large;
 }
 
 div {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
