@@ -17,7 +17,7 @@ const Header = () => (
           <IoIosArrowBack />
           {' '}
         </Link>
-        <span className="link dim white dib mr6" href="#" title="year">Coranavirus Tracker</span>
+        <span className="link dim white dib mr4" href="#" title="year">Coranavirus Tracker</span>
         <span className="link dim white dib mr3" href="#" title="mic">
           {' '}
           <BsMic />
