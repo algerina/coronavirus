@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import Header from '../components/Header';
 
 describe('Check page rendering', () => {
-  it('Should render without error', () => {
+  test('Should render without error', () => {
     const header = renderer.create(<Router><Header /></Router>).toJSON();
     expect(header).toMatchSnapshot();
   });
