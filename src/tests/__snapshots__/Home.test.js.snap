@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Info  1`] = `
+<div>
+  <div
+    className="country"
+  >
+    Afghanistan
+  </div>
+  <div>
+    TOTAL CASES:
+     
+    158639
+  </div>
+  <div
+    className="dark"
+  >
+    Total Deaths:
+     
+    7376
+  </div>
+  <div>
+    Today cases:
+     
+    0
+  </div>
+  <div
+    className="dark"
+  >
+    Today Deaths:
+     
+    0
+  </div>
+  <div>
+    Tests:
+     
+    834349
+  </div>
+  <div
+    className="dark"
+  >
+    Recovered:
+     
+    145906
+  </div>
+  <div>
+    Active cases:
+     
+    5357
+  </div>
+  <div
+    className="dark"
+  >
+    Critical cases:
+     
+    1124
+  </div>
+  <div>
+    <button
+      className="back link dim br3 ph3 pv2 mb2 dib white"
+      onClick={[Function]}
+      type="button"
+    >
+      Back
+    </button>
+  </div>
+</div>
+`;
