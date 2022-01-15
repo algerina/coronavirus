@@ -2,7 +2,7 @@
 
 # Project Name
 
-> This project ismobile web application to check a list of metrics  created making use of React and Redux.
+> This project is mobile web application to check a list of metrics  created making use of React and Redux.
 
 ![screenshot](./src/snap1.JPG)
 ![screenshot](./src/snap2.JPG)
