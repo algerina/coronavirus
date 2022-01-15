@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  /* margin: 1rem; */
   color: white;
   font-size: x-large;
   padding: 10px;
@@ -25,4 +24,3 @@ div {
   margin: 1rem;
   background-color: rgb(72 74 225);
 }
-
