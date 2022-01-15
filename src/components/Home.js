@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const Home = (props) => {
@@ -47,6 +48,19 @@ const Home = (props) => {
         {' '}
         {country.critical}
       </div>
+      <Redirect />
+    </div>
+  );
+};
+
+export const Redirect = () => {
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate(-1);
+  }
+  return (
+    <div>
+      <button className="back link dim br3 ph3 pv2 mb2 dib white" type="button" onClick={handleClick}>Back</button>
     </div>
   );
 };

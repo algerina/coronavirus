@@ -19,18 +19,18 @@ const initialState = [
       flag: 'text',
     },
   },
-  {
-    id: 1,
-    country: 'Lebanon',
-    cases: '3000',
-    Deaths: '300',
-    Recovered: '20',
-    countryInfo: {
-      _id: 1,
-      iso3: 'ajt',
-      flag: 'text',
-    },
-  },
+  // {
+  //   id: 1,
+  //   country: 'Lebanon',
+  //   cases: '3000',
+  //   Deaths: '300',
+  //   Recovered: '20',
+  //   countryInfo: {
+  //     _id: 1,
+  //     iso3: 'ajt',
+  //     flag: 'text',
+  //   },
+  // },
 ];
 
 export const searchCountry = (query) => ({ type: SEARCH_COUNTRY, payload: query });

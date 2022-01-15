@@ -17,7 +17,7 @@ const CardList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="cf">
       <Header />
       <SearchBox setSearchTerm={setSearchTerm} />
       {

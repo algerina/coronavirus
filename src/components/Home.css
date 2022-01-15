@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  margin: 1rem;
+  /* margin: 1rem; */
   color: white;
   font-size: x-large;
   padding: 10px;
@@ -18,4 +18,10 @@ body {
 
 div {
   padding-bottom: 1rem;
+}
+
+.back {
+  color: white;
+  margin: 1rem;
+  background-color: rgb(72 74 225);
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const Card = (params) => {
   const { country, todayCases, countryInfo: { flag } } = params.data; // eslint-disable-line
   return (
-    <div className="tc bg--light-blue dib br3 pa3 ma2 grow bw2 shadow-5">
+    <div className="tc bg--light-blue dib pa1 grow bw2 shadow-5 w-48-ns">
       <div>
         <img src={flag} alt="flag" />
       </div>

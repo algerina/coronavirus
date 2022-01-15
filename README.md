@@ -9,6 +9,10 @@
 ![screenshot](./src/snap3.JPG)
 
 
+## Live Demo
+
+[Live Demo Link](https://amelcoronavirus.netlify.app/)
+
 ## Presentation
 
 [Video Link](https://www.loom.com/share/e587ee2971ac450ba8dce1176d7ef2dc)
